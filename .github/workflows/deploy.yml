@@ -40,8 +40,8 @@ jobs:
 
       - name: Login config (password hashes only)
         env:
-          SV_ADMIN_PASSWORD: ${{ secrets.SV_ADMIN_PASSWORD }}
-          SV_VIEWER_PASSWORD: ${{ secrets.SV_VIEWER_PASSWORD }}
+          BC_ADMIN_PASSWORD: ${{ secrets.BC_ADMIN_PASSWORD }}
+          BC_VIEWER_PASSWORD: ${{ secrets.BC_VIEWER_PASSWORD }}
         run: |
           mkdir -p dist/_sv/data
           php scripts/make-config.php > dist/_sv/data/config.php

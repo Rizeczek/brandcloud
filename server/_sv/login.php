@@ -3,7 +3,7 @@ require __DIR__ . '/lib.php';
 
 $next = sv_safe_next($_GET['next'] ?? $_POST['next'] ?? '/');
 $cfg = sv_config();
-if (!$cfg) { http_response_code(503); sv_page('Not configured', '<p class="msg">Login is not configured yet. Add the GitHub secrets SV_ADMIN_PASSWORD and SV_VIEWER_PASSWORD and deploy again.</p>'); exit; }
+if (!$cfg) { http_response_code(503); sv_page('Not configured', '<p class="msg">Login is not configured yet. Add the GitHub secrets BC_ADMIN_PASSWORD and BC_VIEWER_PASSWORD and deploy again.</p>'); exit; }
 
 $err = '';
 $user = strtolower(trim((string) ($_POST['user'] ?? '')));

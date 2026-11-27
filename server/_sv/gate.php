@@ -3,7 +3,7 @@
    Logged-in users get the file; everyone else goes to the login page. */
 require __DIR__ . '/lib.php';
 
-if (!sv_config()) { http_response_code(503); sv_page('Not configured', '<p class="msg">Login is not configured yet (missing passwords). Add the GitHub secrets SV_ADMIN_PASSWORD and SV_VIEWER_PASSWORD and deploy again.</p>'); exit; }
+if (!sv_config()) { http_response_code(503); sv_page('Not configured', '<p class="msg">Login is not configured yet (missing passwords). Add the GitHub secrets BC_ADMIN_PASSWORD and BC_VIEWER_PASSWORD and deploy again.</p>'); exit; }
 sv_require('team');
 
 $path = rawurldecode(parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/');

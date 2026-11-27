@@ -7,7 +7,7 @@ so the design can be evaluated (how it works, how it scales). Desktop first; mob
 - `node scripts/build.mjs` → `dist/` → FTP to Wedos (brandcloud.fraymz.digital) on push to `main`. Never commit `dist/` or passwords.
 - `npm ci` once (Lucide icons come from the `lucide-static` package). `npm run dev` = build + http://localhost:8080.
 - Everything is behind the login (`server/_sv/gate.php` via `.htaccess`); only `/ds/*` is public. Passwords are GitHub secrets
-  SV_ADMIN_PASSWORD / SV_VIEWER_PASSWORD; FTP_SERVER / FTP_USERNAME / FTP_PASSWORD / FTP_TARGET_DIR.
+  BC_ADMIN_PASSWORD / BC_VIEWER_PASSWORD; FTP_SERVER / FTP_USERNAME / FTP_PASSWORD / FTP_TARGET_DIR.
 - Verify with `npm run dev` before pushing: 1440 × 900 desktop and 390 × 844 mobile, both languages, a few acting users.
 
 ## Design system (source: Figma)

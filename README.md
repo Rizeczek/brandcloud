@@ -26,7 +26,7 @@ npm run data           # regenerate mock data + placeholder assets
 
 ## Deploy
 Push to `main` → GitHub Actions builds and FTP-uploads `dist/` to Wedos. Secrets (repo → Settings → Secrets and variables → Actions):
-`FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`, `FTP_TARGET_DIR`, `SV_ADMIN_PASSWORD`, `SV_VIEWER_PASSWORD` (users `admin` / `team`).
+`FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`, `FTP_TARGET_DIR`, `BC_ADMIN_PASSWORD`, `BC_VIEWER_PASSWORD` (users `admin` / `team`).
 
 ## Where things live
 - `ds/` design system: tokens (`ds/tokens/figma.tokens.json` from Figma), `base.css`, `components.css`, `components.js`, icons

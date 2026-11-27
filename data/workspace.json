@@ -1,0 +1,195 @@
+{
+ "_doc": "Users, teams and roles of the fictional workspace. Teams carry content access (grants on items in content.json), roles carry global capabilities (spec/permissions.json).",
+ "roles": [
+  {
+   "id": "r-owner",
+   "name": {
+    "cs": "Vlastník",
+    "en": "Owner"
+   },
+   "system": true,
+   "fullAccess": true,
+   "caps": []
+  },
+  {
+   "id": "r-admin",
+   "name": {
+    "cs": "Administrátor",
+    "en": "Administrator"
+   },
+   "fullAccess": true,
+   "caps": []
+  },
+  {
+   "id": "r-editor",
+   "name": {
+    "cs": "Editor",
+    "en": "Editor"
+   },
+   "caps": [
+    "createRoot",
+    "dataCloud",
+    "trash",
+    "statistics",
+    "eshop"
+   ]
+  },
+  {
+   "id": "r-approver",
+   "name": {
+    "cs": "Schvalovatel",
+    "en": "Approver"
+   },
+   "caps": [
+    "approve",
+    "dataCloud",
+    "statistics",
+    "eshop"
+   ]
+  },
+  {
+   "id": "r-viewer",
+   "name": {
+    "cs": "Čtenář",
+    "en": "Viewer"
+   },
+   "caps": [
+    "dataCloud",
+    "eshop"
+   ]
+  },
+  {
+   "id": "r-guest",
+   "name": {
+    "cs": "Host",
+    "en": "Guest"
+   },
+   "caps": []
+  }
+ ],
+ "teams": [
+  {
+   "id": "t-marketing",
+   "name": {
+    "cs": "Marketing",
+    "en": "Marketing"
+   },
+   "parent": null
+  },
+  {
+   "id": "t-social",
+   "name": {
+    "cs": "Sociální sítě",
+    "en": "Social media"
+   },
+   "parent": "t-marketing"
+  },
+  {
+   "id": "t-sales",
+   "name": {
+    "cs": "Obchod",
+    "en": "Sales"
+   },
+   "parent": null
+  },
+  {
+   "id": "t-management",
+   "name": {
+    "cs": "Vedení",
+    "en": "Management"
+   },
+   "parent": null
+  },
+  {
+   "id": "t-agency",
+   "name": {
+    "cs": "Agentura",
+    "en": "Agency"
+   },
+   "parent": null
+  }
+ ],
+ "users": [
+  {
+   "id": "u-petra",
+   "name": "Petra Nováková",
+   "email": "petra.novakova@brand.example",
+   "role": "r-owner",
+   "teams": [
+    "t-marketing",
+    "t-management"
+   ],
+   "title": {
+    "cs": "Brand manažerka",
+    "en": "Brand manager"
+   }
+  },
+  {
+   "id": "u-tomas",
+   "name": "Tomáš Dvořák",
+   "email": "tomas.dvorak@brand.example",
+   "role": "r-editor",
+   "teams": [
+    "t-marketing"
+   ],
+   "title": {
+    "cs": "Marketingový specialista",
+    "en": "Marketing specialist"
+   }
+  },
+  {
+   "id": "u-klara",
+   "name": "Klára Benešová",
+   "email": "klara.benesova@brand.example",
+   "role": "r-editor",
+   "teams": [
+    "t-social"
+   ],
+   "title": {
+    "cs": "Social media manažerka",
+    "en": "Social media manager"
+   }
+  },
+  {
+   "id": "u-lucie",
+   "name": "Lucie Svobodová",
+   "email": "lucie.svobodova@brand.example",
+   "role": "r-approver",
+   "teams": [
+    "t-marketing",
+    "t-management"
+   ],
+   "title": {
+    "cs": "Vedoucí značky",
+    "en": "Head of brand"
+   }
+  },
+  {
+   "id": "u-jan",
+   "name": "Jan Král",
+   "email": "jan.kral@brand.example",
+   "role": "r-viewer",
+   "teams": [
+    "t-sales"
+   ],
+   "title": {
+    "cs": "Obchodní zástupce",
+    "en": "Sales representative"
+   }
+  },
+  {
+   "id": "u-eva",
+   "name": "Eva Horáková",
+   "email": "eva@agentura.example",
+   "role": "r-guest",
+   "teams": [
+    "t-agency"
+   ],
+   "title": {
+    "cs": "Art directorka, agentura",
+    "en": "Art director, agency"
+   }
+  }
+ ],
+ "me": "u-petra"
+}

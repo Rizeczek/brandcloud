@@ -1,0 +1,1840 @@
+{
+ "_doc": "Folders, smartpages and links (items), smartpage sections/blocks (pages), files (assets). Data Cloud is derived from asset/image blocks – never edited directly.",
+ "items": [
+  {
+   "id": "f-identity",
+   "type": "folder",
+   "parent": null,
+   "name": {
+    "cs": "Logo a identita",
+    "en": "Logo & identity"
+   },
+   "tags": [
+    "identita"
+   ],
+   "grants": {
+    "t-marketing": "lock",
+    "t-sales": "download",
+    "t-agency": "download",
+    "t-management": "view"
+   },
+   "updated": "2026-10-07T09:13",
+   "by": "u-petra",
+   "cover": "a-logo"
+  },
+  {
+   "id": "p-brandbook",
+   "type": "page",
+   "parent": "f-identity",
+   "name": {
+    "cs": "Brand manuál",
+    "en": "Brand book"
+   },
+   "tags": [],
+   "grants": {},
+   "updated": "2026-11-20T13:02",
+   "by": "u-petra",
+   "status": "approved",
+   "locked": true,
+   "cover": "a-pdf-brandbook"
+  },
+  {
+   "id": "p-logo",
+   "type": "page",
+   "parent": "f-identity",
+   "name": {
+    "cs": "Logo – pravidla použití",
+    "en": "Logo – usage rules"
+   },
+   "tags": [],
+   "grants": {},
+   "updated": "2026-11-13T13:59",
+   "by": "u-petra",
+   "status": "approved",
+   "cover": "a-logo"
+  },
+  {
+   "id": "p-colors",
+   "type": "page",
+   "parent": "f-identity",
+   "name": {
+    "cs": "Barvy",
+    "en": "Colours"
+   },
+   "tags": [],
+   "grants": {},
+   "updated": "2026-10-12T09:04",
+   "by": "u-petra",
+   "status": "approved",
+   "cover": "a-banner"
+  },
+  {
+   "id": "p-type",
+   "type": "page",
+   "parent": "f-identity",
+   "name": {
+    "cs": "Typografie",
+    "en": "Typography"
+   },
+   "tags": [],
+   "grants": {},
+   "updated": "2026-11-21T16:35",
+   "by": "u-petra",
+   "status": "approved",
+   "cover": "a-font-fraunces"
+  },
+  {
+   "id": "f-campaigns",
+   "type": "folder",
+   "parent": null,
+   "name": {
+    "cs": "Kampaně",
+    "en": "Campaigns"
+   },
+   "tags": [
+    "kampaně"
+   ],
+   "grants": {
+    "t-marketing": "edit",
+    "t-sales": "view",
+    "t-agency": "download",
+    "t-management": "view"
+   },
+   "updated": "2026-09-26T08:48",
+   "by": "u-petra",
+   "cover": "a-summer-1"
+  },
+  {
+   "id": "f-summer27",
+   "type": "folder",
+   "parent": "f-campaigns",
+   "name": {
+    "cs": "Kampaň A",
+    "en": "Campaign A"
+   },
+   "tags": [],
+   "grants": {},
+   "updated": "2026-10-05T09:01",
+   "by": "u-tomas",
+   "cover": "a-summer-1"
+  },
+  {
+   "id": "p-summer-brief",
+   "type": "page",
+   "parent": "f-summer27",
+   "name": {
+    "cs": "Brief kampaně",
+    "en": "Campaign brief"
+   },
+   "tags": [],
+   "grants": {},
+   "updated": "2026-09-19T08:45",
+   "by": "u-tomas",
+   "status": "pending",
+   "submittedBy": "u-tomas",
+   "cover": "a-summer-1"
+  },
+  {
+   "id": "p-summer-media",
+   "type": "page",
+   "parent": "f-summer27",
+   "name": {
+    "cs": "Podklady pro média",
+    "en": "Media kit"
+   },
+   "tags": [],
+   "grants": {},
+   "updated": "2026-11-07T16:29",
+   "by": "u-eva",
+   "status": "draft",
+   "cover": "a-summer-2"
+  },
+  {
+   "id": "f-xmas26",
+   "type": "folder",
+   "parent": "f-campaigns",
+   "name": {
+    "cs": "Kampaň B",
+    "en": "Campaign B"
+   },
+   "tags": [],
+   "grants": {},
+   "updated": "2026-09-12T08:42",
+   "by": "u-petra",
+   "cover": "a-xmas-1"
+  },
+  {
+   "id": "p-xmas-gifts",
+   "type": "page",
+   "parent": "f-xmas26",
+   "name": {
+    "cs": "Podklady kampaně B",
+    "en": "Campaign B materials"
+   },
+   "tags": [],
+   "grants": {},
+   "updated": "2026-11-11T13:47",
+   "by": "u-petra",
+   "status": "approved",
+   "cover": "a-xmas-1"
+  },
+  {
+   "id": "f-spring27",
+   "type": "folder",
+   "parent": "f-campaigns",
+   "name": {
+    "cs": "Kampaň C",
+    "en": "Campaign C"
+   },
+   "tags": [],
+   "grants": {},
+   "updated": "2026-09-16T14:00",
+   "by": "u-tomas"
+  },
+  {
+   "id": "f-products",
+   "type": "folder",
+   "parent": null,
+   "name": {
+    "cs": "Produkty",
+    "en": "Products"
+   },
+   "tags": [
+    "produkty"
+   ],
+   "grants": {
+    "t-marketing": "edit",
+    "t-social": "view",
+    "t-sales": "download",
+    "t-agency": "download",
+    "t-management": "view"
+   },
+   "updated": "2026-10-21T15:13",
+   "by": "u-petra",
+   "cover": "a-brew-1"
+  },
+  {
+   "id": "p-tea",
+   "type": "page",
+   "parent": "f-products",
+   "name": {
+    "cs": "Produktová řada A",
+    "en": "Product line A"
+   },
+   "tags": [],
+   "grants": {},
+   "updated": "2026-09-20T11:18",
+   "by": "u-petra",
+   "status": "approved",
+   "cover": "a-tea-1"
+  },
+  {
+   "id": "p-coldbrew",
+   "type": "page",
+   "parent": "f-products",
+   "name": {
+    "cs": "Produktová řada B",
+    "en": "Product line B"
+   },
+   "tags": [],
+   "grants": {},
+   "updated": "2026-10-03T09:49",
+   "by": "u-petra",
+   "status": "approved",
+   "cover": "a-brew-2"
+  },
+  {
+   "id": "p-accessories",
+   "type": "page",
+   "parent": "f-products",
+   "name": {
+    "cs": "Produktová řada C",
+    "en": "Product line C"
+   },
+   "tags": [],
+   "grants": {},
+   "updated": "2026-11-23T13:41",
+   "by": "u-tomas",
+   "status": "draft",
+   "cover": "a-acc-1"
+  },
+  {
+   "id": "f-social",
+   "type": "folder",
+   "parent": null,
+   "name": {
+    "cs": "Sociální sítě",
+    "en": "Social media"
+   },
+   "tags": [],
+   "grants": {
+    "t-marketing": "edit",
+    "t-agency": "view"
+   },
+   "updated": "2026-09-02T14:54",
+   "by": "u-klara",
+   "cover": "a-social-1"
+  },
+  {
+   "id": "p-social-templates",
+   "type": "page",
+   "parent": "f-social",
+   "name": {
+    "cs": "Šablony",
+    "en": "Templates"
+   },
+   "tags": [],
+   "grants": {},
+   "updated": "2026-11-27T10:59",
+   "by": "u-klara",
+   "status": "approved",
+   "cover": "a-social-2"
+  },
+  {
+   "id": "p-social-voice",
+   "type": "page",
+   "parent": "f-social",
+   "name": {
+    "cs": "Pravidla komunikace",
+    "en": "Tone of voice"
+   },
+   "tags": [],
+   "grants": {},
+   "updated": "2026-11-05T16:17",
+   "by": "u-klara",
+   "status": "approved",
+   "cover": "a-life-3"
+  },
+  {
+   "id": "f-internal",
+   "type": "folder",
+   "parent": null,
+   "name": {
+    "cs": "Interní",
+    "en": "Internal"
+   },
+   "tags": [
+    "interní"
+   ],
+   "grants": {
+    "t-management": "edit",
+    "t-marketing": "view"
+   },
+   "updated": "2026-09-10T08:30",
+   "by": "u-petra"
+  },
+  {
+   "id": "p-onboarding",
+   "type": "page",
+   "parent": "f-internal",
+   "name": {
+    "cs": "Onboarding",
+    "en": "Onboarding"
+   },
+   "tags": [],
+   "grants": {},
+   "updated": "2026-11-09T13:35",
+   "by": "u-petra",
+   "status": "approved",
+   "cover": "a-life-1"
+  },
+  {
+   "id": "f-lifestyle",
+   "type": "folder",
+   "parent": null,
+   "name": {
+    "cs": "Fotobanka",
+    "en": "Photo library"
+   },
+   "tags": [],
+   "grants": {
+    "t-marketing": "edit",
+    "t-sales": "download",
+    "t-agency": "edit",
+    "t-management": "view"
+   },
+   "updated": "2026-09-14T14:48",
+   "by": "u-eva",
+   "cover": "a-life-2"
+  },
+  {
+   "id": "p-lifestyle",
+   "type": "page",
+   "parent": "f-lifestyle",
+   "name": {
+    "cs": "Lifestyle fotografie",
+    "en": "Lifestyle photos"
+   },
+   "tags": [],
+   "grants": {},
+   "updated": "2026-11-13T10:53",
+   "by": "u-eva",
+   "status": "approved",
+   "cover": "a-life-4"
+  },
+  {
+   "id": "p-start",
+   "type": "page",
+   "parent": null,
+   "name": {
+    "cs": "Začněte zde",
+    "en": "Start here"
+   },
+   "tags": [],
+   "grants": {
+    "t-marketing": "edit",
+    "t-sales": "view",
+    "t-agency": "view",
+    "t-management": "view"
+   },
+   "updated": "2026-10-12T15:58",
+   "by": "u-petra",
+   "status": "approved",
+   "cover": "a-life-2"
+  },
+  {
+   "id": "l-web",
+   "type": "link",
+   "parent": null,
+   "name": {
+    "cs": "Web značky",
+    "en": "Brand website"
+   },
+   "tags": [],
+   "grants": {
+    "t-marketing": "view",
+    "t-sales": "view",
+    "t-agency": "view",
+    "t-management": "view"
+   },
+   "updated": "2026-11-17T16:11",
+   "by": "u-petra",
+   "url": "https://brand.example"
+  }
+ ],
+ "pages": {
+  "p-brandbook": {
+   "sections": [
+    {
+     "id": "s2",
+     "title": null,
+     "blocks": [
+      {
+       "id": "b3",
+       "type": "h1",
+       "text": {
+        "cs": "Brand manuál",
+        "en": "Brand book"
+       }
+      },
+      {
+       "id": "b4",
+       "type": "p",
+       "text": {
+        "cs": "Zástupný text. Manuál popisuje, jak značka vypadá a mluví.",
+        "en": "Placeholder text. The book describes how the brand looks and speaks."
+       }
+      }
+     ]
+    },
+    {
+     "id": "s5",
+     "title": {
+      "cs": "Ke stažení",
+      "en": "Downloads"
+     },
+     "blocks": [
+      {
+       "id": "b6",
+       "type": "p",
+       "text": {
+        "cs": "Kompletní manuál v PDF a logotypy ve všech variantách.",
+        "en": "The complete book as a PDF and the logo in all variants."
+       }
+      },
+      {
+       "id": "b7",
+       "type": "asset",
+       "assets": [
+        "a-pdf-brandbook",
+        "a-logo",
+        "a-logo-neg"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "s8",
+     "title": {
+      "cs": "Hodnoty",
+      "en": "Values"
+     },
+     "blocks": [
+      {
+       "id": "b9",
+       "type": "h2",
+       "text": {
+        "cs": "Hodnoty značky",
+        "en": "Brand values"
+       }
+      },
+      {
+       "id": "b10",
+       "type": "p",
+       "text": {
+        "cs": "Zástupný text o hodnotách značky.",
+        "en": "Placeholder text about the brand values."
+       }
+      },
+      {
+       "id": "b11",
+       "type": "divider"
+      },
+      {
+       "id": "b12",
+       "type": "h3",
+       "text": {
+        "cs": "Čemu se vyhnout",
+        "en": "What to avoid"
+       }
+      },
+      {
+       "id": "b13",
+       "type": "p",
+       "text": {
+        "cs": "Zástupný text.",
+        "en": "Placeholder text."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "p-logo": {
+   "sections": [
+    {
+     "id": "s15",
+     "title": null,
+     "blocks": [
+      {
+       "id": "b16",
+       "type": "h1",
+       "text": {
+        "cs": "Logo",
+        "en": "Logo"
+       }
+      },
+      {
+       "id": "b17",
+       "type": "p",
+       "text": {
+        "cs": "Zástupný text. Neupravujte proporce ani barvy loga.",
+        "en": "Placeholder text. Do not change the logo proportions or colours."
+       }
+      }
+     ]
+    },
+    {
+     "id": "s18",
+     "title": {
+      "cs": "Varianty",
+      "en": "Variants"
+     },
+     "blocks": [
+      {
+       "id": "b19",
+       "type": "asset",
+       "assets": [
+        "a-logo",
+        "a-logo-mono",
+        "a-logo-neg",
+        "a-mark"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "s20",
+     "title": {
+      "cs": "Ochranná zóna",
+      "en": "Clear space"
+     },
+     "blocks": [
+      {
+       "id": "b21",
+       "type": "p",
+       "text": {
+        "cs": "Kolem loga ponechte volný prostor alespoň o velikosti značky.",
+        "en": "Keep free space around the logo at least the size of the mark."
+       }
+      },
+      {
+       "id": "b22",
+       "type": "image",
+       "asset": "a-logo"
+      }
+     ]
+    }
+   ]
+  },
+  "p-colors": {
+   "sections": [
+    {
+     "id": "s24",
+     "title": null,
+     "blocks": [
+      {
+       "id": "b25",
+       "type": "h1",
+       "text": {
+        "cs": "Barevná paleta",
+        "en": "Colour palette"
+       }
+      },
+      {
+       "id": "b26",
+       "type": "p",
+       "text": {
+        "cs": "Zástupný text k barevné paletě.",
+        "en": "Placeholder text about the palette."
+       }
+      },
+      {
+       "id": "b27",
+       "type": "colors",
+       "colors": [
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "p-type": {
+   "sections": [
+    {
+     "id": "s29",
+     "title": null,
+     "blocks": [
+      {
+       "id": "b30",
+       "type": "h1",
+       "text": {
+        "cs": "Typografie",
+        "en": "Typography"
+       }
+      },
+      {
+       "id": "b31",
+       "type": "p",
+       "text": {
+        "cs": "Zástupný text k písmům značky.",
+        "en": "Placeholder text about the brand fonts."
+       }
+      },
+      {
+       "id": "b32",
+       "type": "font",
+       "font": "display"
+      },
+      {
+       "id": "b33",
+       "type": "font",
+       "font": "text"
+      },
+      {
+       "id": "b34",
+       "type": "asset",
+       "assets": [
+        "a-font-fraunces"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "p-summer-brief": {
+   "sections": [
+    {
+     "id": "s38",
+     "title": null,
+     "blocks": [
+      {
+       "id": "b39",
+       "type": "h1",
+       "text": {
+        "cs": "Kampaň A",
+        "en": "Campaign A"
+       }
+      },
+      {
+       "id": "b40",
+       "type": "p",
+       "text": {
+        "cs": "Zástupný text briefu kampaně.",
+        "en": "Placeholder campaign brief text."
+       }
+      }
+     ]
+    },
+    {
+     "id": "s41",
+     "title": {
+      "cs": "Podklady",
+      "en": "Materials"
+     },
+     "blocks": [
+      {
+       "id": "b42",
+       "type": "asset",
+       "assets": [
+        "a-pdf-brief",
+        "a-summer-1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "s43",
+     "title": {
+      "cs": "Harmonogram",
+      "en": "Timeline"
+     },
+     "blocks": [
+      {
+       "id": "b44",
+       "type": "p",
+       "text": {
+        "cs": "Spuštění 1. 6. 2027, venkovní reklama 6 týdnů.",
+        "en": "Launch on 1 June 2027, outdoor for 6 weeks."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "p-summer-media": {
+   "sections": [
+    {
+     "id": "s46",
+     "title": null,
+     "blocks": [
+      {
+       "id": "b47",
+       "type": "h1",
+       "text": {
+        "cs": "Media kit",
+        "en": "Media kit"
+       }
+      },
+      {
+       "id": "b48",
+       "type": "p",
+       "text": {
+        "cs": "Zástupný text.",
+        "en": "Placeholder text."
+       }
+      }
+     ]
+    },
+    {
+     "id": "s49",
+     "title": {
+      "cs": "Vizuály",
+      "en": "Visuals"
+     },
+     "blocks": [
+      {
+       "id": "b50",
+       "type": "asset",
+       "assets": [
+        "a-summer-1",
+        "a-summer-2",
+        "a-summer-3"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "s51",
+     "title": {
+      "cs": "Tisková zpráva",
+      "en": "Press release"
+     },
+     "blocks": [
+      {
+       "id": "b52",
+       "type": "asset",
+       "assets": [
+        "a-pdf-press"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "p-xmas-gifts": {
+   "sections": [
+    {
+     "id": "s55",
+     "title": null,
+     "blocks": [
+      {
+       "id": "b56",
+       "type": "h1",
+       "text": {
+        "cs": "Kampaň B",
+        "en": "Campaign B"
+       }
+      },
+      {
+       "id": "b57",
+       "type": "p",
+       "text": {
+        "cs": "Zástupný text.",
+        "en": "Placeholder text."
+       }
+      },
+      {
+       "id": "b58",
+       "type": "asset",
+       "assets": [
+        "a-xmas-1",
+        "a-xmas-2"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "p-tea": {
+   "sections": [
+    {
+     "id": "s62",
+     "title": null,
+     "blocks": [
+      {
+       "id": "b63",
+       "type": "h1",
+       "text": {
+        "cs": "Produktová řada A",
+        "en": "Product line A"
+       }
+      },
+      {
+       "id": "b64",
+       "type": "p",
+       "text": {
+        "cs": "Zástupný text produktové řady.",
+        "en": "Placeholder product line text."
+       }
+      },
+      {
+       "id": "b65",
+       "type": "asset",
+       "assets": [
+        "a-tea-1",
+        "a-tea-2",
+        "a-tea-3",
+        "a-tea-4",
+        "a-tea-5",
+        "a-tea-6"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "p-coldbrew": {
+   "sections": [
+    {
+     "id": "s67",
+     "title": null,
+     "blocks": [
+      {
+       "id": "b68",
+       "type": "h1",
+       "text": {
+        "cs": "Produktová řada B",
+        "en": "Product line B"
+       }
+      },
+      {
+       "id": "b69",
+       "type": "p",
+       "text": {
+        "cs": "Zástupný text.",
+        "en": "Placeholder text."
+       }
+      },
+      {
+       "id": "b70",
+       "type": "image",
+       "asset": "a-brew-1"
+      }
+     ]
+    },
+    {
+     "id": "s71",
+     "title": {
+      "cs": "Varianty",
+      "en": "Variants"
+     },
+     "blocks": [
+      {
+       "id": "b72",
+       "type": "asset",
+       "assets": [
+        "a-brew-1",
+        "a-brew-2",
+        "a-brew-3",
+        "a-brew-4"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "p-accessories": {
+   "sections": [
+    {
+     "id": "s74",
+     "title": null,
+     "blocks": [
+      {
+       "id": "b75",
+       "type": "h1",
+       "text": {
+        "cs": "Produktová řada C",
+        "en": "Product line C"
+       }
+      },
+      {
+       "id": "b76",
+       "type": "asset",
+       "assets": [
+        "a-acc-1",
+        "a-acc-2",
+        "a-acc-3"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "p-social-templates": {
+   "sections": [
+    {
+     "id": "s79",
+     "title": null,
+     "blocks": [
+      {
+       "id": "b80",
+       "type": "h1",
+       "text": {
+        "cs": "Šablony pro sociální sítě",
+        "en": "Social media templates"
+       }
+      },
+      {
+       "id": "b81",
+       "type": "p",
+       "text": {
+        "cs": "Zástupný text k šablonám.",
+        "en": "Placeholder text about the templates."
+       }
+      },
+      {
+       "id": "b82",
+       "type": "asset",
+       "assets": [
+        "a-social-1",
+        "a-social-2",
+        "a-social-3",
+        "a-social-4"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "p-social-voice": {
+   "sections": [
+    {
+     "id": "s84",
+     "title": null,
+     "blocks": [
+      {
+       "id": "b85",
+       "type": "h1",
+       "text": {
+        "cs": "Jak mluvíme",
+        "en": "How we speak"
+       }
+      },
+      {
+       "id": "b86",
+       "type": "p",
+       "text": {
+        "cs": "Zástupný text k tónu komunikace.",
+        "en": "Placeholder tone-of-voice text."
+       }
+      },
+      {
+       "id": "b87",
+       "type": "h2",
+       "text": {
+        "cs": "Příklady",
+        "en": "Examples"
+       }
+      },
+      {
+       "id": "b88",
+       "type": "p",
+       "text": {
+        "cs": "Zástupný příklad.",
+        "en": "Placeholder example."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "p-onboarding": {
+   "sections": [
+    {
+     "id": "s91",
+     "title": null,
+     "blocks": [
+      {
+       "id": "b92",
+       "type": "h1",
+       "text": {
+        "cs": "Vítejte",
+        "en": "Welcome"
+       }
+      },
+      {
+       "id": "b93",
+       "type": "p",
+       "text": {
+        "cs": "Zástupný text onboardingu.",
+        "en": "Placeholder onboarding text."
+       }
+      },
+      {
+       "id": "b94",
+       "type": "image",
+       "asset": "a-life-1"
+      }
+     ]
+    }
+   ]
+  },
+  "p-lifestyle": {
+   "sections": [
+    {
+     "id": "s97",
+     "title": null,
+     "blocks": [
+      {
+       "id": "b98",
+       "type": "h1",
+       "text": {
+        "cs": "Lifestyle",
+        "en": "Lifestyle"
+       }
+      },
+      {
+       "id": "b99",
+       "type": "p",
+       "text": {
+        "cs": "Zástupný text k fotobance.",
+        "en": "Placeholder photo library text."
+       }
+      },
+      {
+       "id": "b100",
+       "type": "asset",
+       "assets": [
+        "a-life-1",
+        "a-life-2",
+        "a-life-3",
+        "a-life-4",
+        "a-life-5",
+        "a-life-6"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "p-start": {
+   "sections": [
+    {
+     "id": "s102",
+     "title": null,
+     "blocks": [
+      {
+       "id": "b103",
+       "type": "h1",
+       "text": {
+        "cs": "Vítejte v brand portálu",
+        "en": "Welcome to the brand portal"
+       }
+      },
+      {
+       "id": "b104",
+       "type": "p",
+       "text": {
+        "cs": "Najdete tu vše, co potřebujete k práci se značkou: logo, barvy, fotky produktů i podklady kampaní.",
+        "en": "Everything you need to work with the brand: logo, colours, product photos and campaign materials."
+       }
+      },
+      {
+       "id": "b105",
+       "type": "image",
+       "asset": "a-life-2"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "assets": [
+  {
+   "id": "a-banner",
+   "file": "/data/assets/banner.svg",
+   "w": 1600,
+   "h": 320,
+   "kind": "image",
+   "name": "banner.svg",
+   "ext": "svg",
+   "size": 180000,
+   "tags": [
+    "banner"
+   ],
+   "created": "2026-09-01",
+   "by": "u-tomas",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-logo",
+   "file": "/data/assets/logo-primary.svg",
+   "w": 800,
+   "h": 320,
+   "kind": "image",
+   "name": "logo-primary.svg",
+   "ext": "svg",
+   "size": 2390000,
+   "tags": [
+    "logo"
+   ],
+   "created": "2026-09-02",
+   "by": "u-petra",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-logo-mono",
+   "file": "/data/assets/logo-mono.svg",
+   "w": 800,
+   "h": 320,
+   "kind": "image",
+   "name": "logo-mono.svg",
+   "ext": "svg",
+   "size": 874000,
+   "tags": [
+    "logo"
+   ],
+   "created": "2026-09-03",
+   "by": "u-petra",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-logo-neg",
+   "file": "/data/assets/logo-negative.svg",
+   "w": 800,
+   "h": 320,
+   "kind": "image",
+   "name": "logo-negative.svg",
+   "ext": "svg",
+   "size": 685000,
+   "tags": [
+    "logo"
+   ],
+   "created": "2026-09-04",
+   "by": "u-petra",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-mark",
+   "file": "/data/assets/logo-mark.svg",
+   "w": 320,
+   "h": 320,
+   "kind": "image",
+   "name": "logo-mark.svg",
+   "ext": "svg",
+   "size": 1930000,
+   "tags": [
+    "logo"
+   ],
+   "created": "2026-09-05",
+   "by": "u-petra",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-tea-1",
+   "file": "/data/assets/product-a-1.svg",
+   "w": 800,
+   "h": 800,
+   "kind": "image",
+   "name": "produkt-a-1.svg",
+   "ext": "svg",
+   "size": 1459000,
+   "tags": [
+    "produkt"
+   ],
+   "created": "2026-09-06",
+   "by": "u-tomas",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-tea-2",
+   "file": "/data/assets/product-a-2.svg",
+   "w": 800,
+   "h": 800,
+   "kind": "image",
+   "name": "produkt-a-2.svg",
+   "ext": "svg",
+   "size": 970000,
+   "tags": [
+    "produkt"
+   ],
+   "created": "2026-09-07",
+   "by": "u-klara",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-tea-3",
+   "file": "/data/assets/product-a-3.svg",
+   "w": 800,
+   "h": 800,
+   "kind": "image",
+   "name": "produkt-a-3.svg",
+   "ext": "svg",
+   "size": 1985000,
+   "tags": [
+    "produkt"
+   ],
+   "created": "2026-09-08",
+   "by": "u-tomas",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-tea-4",
+   "file": "/data/assets/product-a-4.svg",
+   "w": 800,
+   "h": 800,
+   "kind": "image",
+   "name": "produkt-a-4.svg",
+   "ext": "svg",
+   "size": 1992000,
+   "tags": [
+    "produkt"
+   ],
+   "created": "2026-09-09",
+   "by": "u-klara",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-tea-5",
+   "file": "/data/assets/product-a-5.svg",
+   "w": 800,
+   "h": 800,
+   "kind": "image",
+   "name": "produkt-a-5.svg",
+   "ext": "svg",
+   "size": 1483000,
+   "tags": [
+    "produkt"
+   ],
+   "created": "2026-09-10",
+   "by": "u-tomas",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-tea-6",
+   "file": "/data/assets/product-a-6.svg",
+   "w": 800,
+   "h": 800,
+   "kind": "image",
+   "name": "produkt-a-6.svg",
+   "ext": "svg",
+   "size": 1823000,
+   "tags": [
+    "produkt"
+   ],
+   "created": "2026-09-11",
+   "by": "u-klara",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-brew-1",
+   "file": "/data/assets/product-b-1.svg",
+   "w": 800,
+   "h": 800,
+   "kind": "image",
+   "name": "produkt-b-1.svg",
+   "ext": "svg",
+   "size": 1706000,
+   "tags": [
+    "produkt"
+   ],
+   "created": "2026-09-12",
+   "by": "u-tomas",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-brew-2",
+   "file": "/data/assets/product-b-2.svg",
+   "w": 800,
+   "h": 800,
+   "kind": "image",
+   "name": "produkt-b-2.svg",
+   "ext": "svg",
+   "size": 2140000,
+   "tags": [
+    "produkt"
+   ],
+   "created": "2026-09-13",
+   "by": "u-tomas",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-brew-3",
+   "file": "/data/assets/product-b-3.svg",
+   "w": 800,
+   "h": 800,
+   "kind": "image",
+   "name": "produkt-b-3.svg",
+   "ext": "svg",
+   "size": 761000,
+   "tags": [
+    "produkt"
+   ],
+   "created": "2026-09-14",
+   "by": "u-tomas",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-brew-4",
+   "file": "/data/assets/product-b-4.svg",
+   "w": 800,
+   "h": 800,
+   "kind": "image",
+   "name": "produkt-b-4.svg",
+   "ext": "svg",
+   "size": 1078000,
+   "tags": [
+    "produkt"
+   ],
+   "created": "2026-09-15",
+   "by": "u-tomas",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-acc-1",
+   "file": "/data/assets/product-c-1.svg",
+   "w": 800,
+   "h": 800,
+   "kind": "image",
+   "name": "produkt-c-1.svg",
+   "ext": "svg",
+   "size": 1879000,
+   "tags": [
+    "produkt"
+   ],
+   "created": "2026-09-16",
+   "by": "u-tomas",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-acc-2",
+   "file": "/data/assets/product-c-2.svg",
+   "w": 800,
+   "h": 800,
+   "kind": "image",
+   "name": "produkt-c-2.svg",
+   "ext": "svg",
+   "size": 1855000,
+   "tags": [
+    "produkt"
+   ],
+   "created": "2026-09-17",
+   "by": "u-tomas",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-acc-3",
+   "file": "/data/assets/product-c-3.svg",
+   "w": 800,
+   "h": 800,
+   "kind": "image",
+   "name": "produkt-c-3.svg",
+   "ext": "svg",
+   "size": 309000,
+   "tags": [
+    "produkt"
+   ],
+   "created": "2026-09-18",
+   "by": "u-tomas",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-life-1",
+   "file": "/data/assets/photo-1.svg",
+   "w": 1200,
+   "h": 800,
+   "kind": "image",
+   "name": "foto-01.svg",
+   "ext": "svg",
+   "size": 1821000,
+   "tags": [
+    "foto"
+   ],
+   "created": "2026-09-19",
+   "by": "u-eva",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-life-2",
+   "file": "/data/assets/photo-2.svg",
+   "w": 1200,
+   "h": 800,
+   "kind": "image",
+   "name": "foto-02.svg",
+   "ext": "svg",
+   "size": 1303000,
+   "tags": [
+    "foto"
+   ],
+   "created": "2026-09-20",
+   "by": "u-eva",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-life-3",
+   "file": "/data/assets/photo-3.svg",
+   "w": 1200,
+   "h": 800,
+   "kind": "image",
+   "name": "foto-03.svg",
+   "ext": "svg",
+   "size": 2394000,
+   "tags": [
+    "foto"
+   ],
+   "created": "2026-09-21",
+   "by": "u-eva",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-life-4",
+   "file": "/data/assets/photo-4.svg",
+   "w": 1200,
+   "h": 800,
+   "kind": "image",
+   "name": "foto-04.svg",
+   "ext": "svg",
+   "size": 2118000,
+   "tags": [
+    "foto"
+   ],
+   "created": "2026-09-22",
+   "by": "u-eva",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-life-5",
+   "file": "/data/assets/photo-5.svg",
+   "w": 1200,
+   "h": 800,
+   "kind": "image",
+   "name": "foto-05.svg",
+   "ext": "svg",
+   "size": 475000,
+   "tags": [
+    "foto"
+   ],
+   "created": "2026-09-23",
+   "by": "u-eva",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-life-6",
+   "file": "/data/assets/photo-6.svg",
+   "w": 1200,
+   "h": 800,
+   "kind": "image",
+   "name": "foto-06.svg",
+   "ext": "svg",
+   "size": 1411000,
+   "tags": [
+    "foto"
+   ],
+   "created": "2026-09-24",
+   "by": "u-eva",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-summer-1",
+   "file": "/data/assets/campaign-a-1.svg",
+   "w": 1200,
+   "h": 800,
+   "kind": "image",
+   "name": "kampan-a-1.svg",
+   "ext": "svg",
+   "size": 2396000,
+   "tags": [
+    "kampaň"
+   ],
+   "created": "2026-09-25",
+   "by": "u-eva",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-summer-2",
+   "file": "/data/assets/campaign-a-2.svg",
+   "w": 1200,
+   "h": 400,
+   "kind": "image",
+   "name": "kampan-a-2.svg",
+   "ext": "svg",
+   "size": 1832000,
+   "tags": [
+    "kampaň"
+   ],
+   "created": "2026-09-26",
+   "by": "u-eva",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-summer-3",
+   "file": "/data/assets/campaign-a-3.svg",
+   "w": 1080,
+   "h": 1080,
+   "kind": "image",
+   "name": "kampan-a-3.svg",
+   "ext": "svg",
+   "size": 1725000,
+   "tags": [
+    "kampaň"
+   ],
+   "created": "2026-09-27",
+   "by": "u-eva",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-xmas-1",
+   "file": "/data/assets/campaign-b-1.svg",
+   "w": 1200,
+   "h": 800,
+   "kind": "image",
+   "name": "kampan-b-1.svg",
+   "ext": "svg",
+   "size": 1566000,
+   "tags": [
+    "kampaň"
+   ],
+   "created": "2026-09-28",
+   "by": "u-tomas",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-xmas-2",
+   "file": "/data/assets/campaign-b-2.svg",
+   "w": 1200,
+   "h": 800,
+   "kind": "image",
+   "name": "kampan-b-2.svg",
+   "ext": "svg",
+   "size": 2369000,
+   "tags": [
+    "kampaň"
+   ],
+   "created": "2026-10-01",
+   "by": "u-tomas",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-social-1",
+   "file": "/data/assets/social-1.svg",
+   "w": 1080,
+   "h": 1080,
+   "kind": "image",
+   "name": "sablona-1.svg",
+   "ext": "svg",
+   "size": 2360000,
+   "tags": [
+    "šablona"
+   ],
+   "created": "2026-10-02",
+   "by": "u-klara",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-social-2",
+   "file": "/data/assets/social-2.svg",
+   "w": 1080,
+   "h": 1920,
+   "kind": "image",
+   "name": "sablona-2.svg",
+   "ext": "svg",
+   "size": 1073000,
+   "tags": [
+    "šablona"
+   ],
+   "created": "2026-10-03",
+   "by": "u-klara",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-social-3",
+   "file": "/data/assets/social-3.svg",
+   "w": 1080,
+   "h": 1350,
+   "kind": "image",
+   "name": "sablona-3.svg",
+   "ext": "svg",
+   "size": 985000,
+   "tags": [
+    "šablona"
+   ],
+   "created": "2026-10-04",
+   "by": "u-klara",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-social-4",
+   "file": "/data/assets/social-4.svg",
+   "w": 1584,
+   "h": 396,
+   "kind": "image",
+   "name": "sablona-4.svg",
+   "ext": "svg",
+   "size": 2189000,
+   "tags": [
+    "šablona"
+   ],
+   "created": "2026-10-05",
+   "by": "u-klara",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-pdf-brandbook",
+   "file": "/data/assets/doc-brandbook.svg",
+   "w": 600,
+   "h": 800,
+   "kind": "pdf",
+   "name": "brand-manual.pdf",
+   "ext": "pdf",
+   "size": 18400000,
+   "tags": [
+    "manuál"
+   ],
+   "created": "2026-10-06",
+   "by": "u-petra",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-pdf-press",
+   "file": "/data/assets/doc-press.svg",
+   "w": 600,
+   "h": 800,
+   "kind": "pdf",
+   "name": "tiskova-zprava.pdf",
+   "ext": "pdf",
+   "size": 820000,
+   "tags": [
+    "PR"
+   ],
+   "created": "2026-10-07",
+   "by": "u-lucie",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-pdf-brief",
+   "file": "/data/assets/doc-brief.svg",
+   "w": 600,
+   "h": 800,
+   "kind": "pdf",
+   "name": "brief-kampane.pdf",
+   "ext": "pdf",
+   "size": 1240000,
+   "tags": [
+    "brief"
+   ],
+   "created": "2026-10-08",
+   "by": "u-tomas",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  },
+  {
+   "id": "a-font-fraunces",
+   "file": "/data/assets/font.svg",
+   "w": 800,
+   "h": 400,
+   "kind": "font",
+   "name": "font-nadpisy.zip",
+   "ext": "zip",
+   "size": 2600000,
+   "tags": [
+    "font"
+   ],
+   "created": "2026-10-09",
+   "by": "u-petra",
+   "desc": {
+    "cs": "",
+    "en": ""
+   }
+  }
+ ],
+ "activity": [
+  {
+   "at": "2026-11-25T14:12",
+   "by": "u-tomas",
+   "act": "submit",
+   "item": "p-summer-brief"
+  },
+  {
+   "at": "2026-11-24T09:40",
+   "by": "u-eva",
+   "act": "create",
+   "item": "p-summer-media"
+  },
+  {
+   "at": "2026-11-20T16:05",
+   "by": "u-lucie",
+   "act": "approve",
+   "item": "p-coldbrew"
+  },
+  {
+   "at": "2026-11-18T11:30",
+   "by": "u-klara",
+   "act": "edit",
+   "item": "p-social-templates"
+  }
+ ],
+ "trash": []
+}

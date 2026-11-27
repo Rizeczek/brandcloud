@@ -1,0 +1,298 @@
+{
+  "_doc": "Single source of truth for the prototype's permission model. app/core.js (can, levelOf) implements exactly these rules; docs/permissions.md is generated from this file (npm run docs). Roles, teams and grants are data (data/workspace.json, data/content.json) and testers can change them in Settings.",
+  "version": 1,
+  "levels": [
+    {
+      "id": "hide",
+      "rank": 0,
+      "label": {
+        "cs": "Skrýt",
+        "en": "Hide"
+      },
+      "desc": {
+        "cs": "Položka není vidět nikde – ani v Data Cloudu a vyhledávání.",
+        "en": "Not visible anywhere – not even in Data Cloud or search."
+      }
+    },
+    {
+      "id": "view",
+      "rank": 1,
+      "label": {
+        "cs": "Zobrazit",
+        "en": "View"
+      },
+      "desc": {
+        "cs": "Otevřít a prohlížet, komentovat.",
+        "en": "Open, browse and comment."
+      }
+    },
+    {
+      "id": "download",
+      "rank": 2,
+      "label": {
+        "cs": "Zobrazit a stáhnout",
+        "en": "View & download"
+      },
+      "desc": {
+        "cs": "Navíc stahovat soubory a sdílet odkazem.",
+        "en": "Also download files and share by link."
+      }
+    },
+    {
+      "id": "edit",
+      "rank": 3,
+      "label": {
+        "cs": "Upravit",
+        "en": "Edit"
+      },
+      "desc": {
+        "cs": "Navíc vytvářet, upravovat, přesouvat a mazat obsah.",
+        "en": "Also create, edit, move and delete content."
+      }
+    },
+    {
+      "id": "lock",
+      "rank": 4,
+      "label": {
+        "cs": "Upravit a zamknout",
+        "en": "Edit & lock"
+      },
+      "desc": {
+        "cs": "Navíc zamykat obsah – zamčené smí upravit jen tato úroveň.",
+        "en": "Also lock content – locked items can only be edited at this level."
+      }
+    }
+  ],
+  "actions": {
+    "open": {
+      "min": "view",
+      "label": {
+        "cs": "Otevřít",
+        "en": "Open"
+      }
+    },
+    "comment": {
+      "min": "view",
+      "label": {
+        "cs": "Komentovat",
+        "en": "Comment"
+      }
+    },
+    "download": {
+      "min": "download",
+      "label": {
+        "cs": "Stáhnout",
+        "en": "Download"
+      }
+    },
+    "share": {
+      "min": "download",
+      "label": {
+        "cs": "Sdílet odkazem",
+        "en": "Share by link"
+      }
+    },
+    "edit": {
+      "min": "edit",
+      "label": {
+        "cs": "Upravit",
+        "en": "Edit"
+      },
+      "lockable": true
+    },
+    "create": {
+      "min": "edit",
+      "label": {
+        "cs": "Vytvořit uvnitř",
+        "en": "Create inside"
+      },
+      "lockable": true
+    },
+    "rename": {
+      "min": "edit",
+      "label": {
+        "cs": "Přejmenovat",
+        "en": "Rename"
+      },
+      "lockable": true
+    },
+    "move": {
+      "min": "edit",
+      "label": {
+        "cs": "Přesunout",
+        "en": "Move"
+      },
+      "lockable": true
+    },
+    "duplicate": {
+      "min": "view",
+      "label": {
+        "cs": "Duplikovat",
+        "en": "Duplicate"
+      },
+      "note": {
+        "cs": "Navíc je potřeba Upravit v cílové složce.",
+        "en": "Also needs Edit on the target folder."
+      }
+    },
+    "delete": {
+      "min": "edit",
+      "label": {
+        "cs": "Smazat",
+        "en": "Delete"
+      },
+      "lockable": true
+    },
+    "submit": {
+      "min": "edit",
+      "label": {
+        "cs": "Odeslat ke schválení",
+        "en": "Submit for approval"
+      }
+    },
+    "lock": {
+      "min": "lock",
+      "label": {
+        "cs": "Zamknout / odemknout",
+        "en": "Lock / unlock"
+      }
+    }
+  },
+  "capabilities": [
+    {
+      "id": "createRoot",
+      "label": {
+        "cs": "Vytvářet obsah na Domovské stránce",
+        "en": "Create content on Home"
+      }
+    },
+    {
+      "id": "approve",
+      "label": {
+        "cs": "Schvalovat smartpage",
+        "en": "Approve smartpages"
+      }
+    },
+    {
+      "id": "dataCloud",
+      "label": {
+        "cs": "Přístup do Data Cloudu",
+        "en": "Access Data Cloud"
+      }
+    },
+    {
+      "id": "trash",
+      "label": {
+        "cs": "Koš – obnovit a trvale smazat",
+        "en": "Trash – restore and delete permanently"
+      }
+    },
+    {
+      "id": "statistics",
+      "label": {
+        "cs": "Statistiky",
+        "en": "Statistics"
+      }
+    },
+    {
+      "id": "eshop",
+      "label": {
+        "cs": "E-shop – objednávat",
+        "en": "E-shop – order"
+      }
+    },
+    {
+      "id": "manageUsers",
+      "label": {
+        "cs": "Spravovat uživatele",
+        "en": "Manage users"
+      }
+    },
+    {
+      "id": "manageTeams",
+      "label": {
+        "cs": "Spravovat týmy a jejich oprávnění",
+        "en": "Manage teams and their permissions"
+      }
+    },
+    {
+      "id": "manageRoles",
+      "label": {
+        "cs": "Spravovat role",
+        "en": "Manage roles"
+      }
+    },
+    {
+      "id": "manageDesign",
+      "label": {
+        "cs": "Upravovat vzhled (banner, barva)",
+        "en": "Edit design (banner, colour)"
+      }
+    }
+  ],
+  "rules": [
+    {
+      "id": "ceiling",
+      "text": {
+        "cs": "Úrovně jsou stropy: Upravit a zamknout ⊃ Upravit ⊃ Zobrazit a stáhnout ⊃ Zobrazit ⊃ Skrýt. Vyšší úroveň zahrnuje všechny nižší.",
+        "en": "Levels are ceilings: Edit & lock ⊃ Edit ⊃ View & download ⊃ View ⊃ Hide. A higher level includes all lower ones."
+      }
+    },
+    {
+      "id": "inherit",
+      "text": {
+        "cs": "Položka bez vlastního nastavení dědí úroveň nadřazené složky. Na nejvyšší úrovni bez nastavení = Skrýt; podtým tam místo toho dědí úroveň rodičovského týmu.",
+        "en": "An item without its own setting inherits the level of its parent folder. At the top level with no setting = Hide; a subteam inherits its parent team's level there instead."
+      }
+    },
+    {
+      "id": "clamp",
+      "text": {
+        "cs": "Nastavení na vnořené položce nesmí překročit úroveň týmu na nadřazené složce. Vyšší volby jsou v matici nedostupné; výběr stejné úrovně, jaká by se zdědila, vlastní nastavení zruší.",
+        "en": "A setting on a nested item cannot exceed the team's level on its parent folder. Higher options are disabled in the matrix; choosing the level that would be inherited anyway removes the own setting."
+      }
+    },
+    {
+      "id": "subteam",
+      "text": {
+        "cs": "Podtým dědí oprávnění rodičovského týmu a smí je jen dál omezit: efektivní úroveň = min(vlastní nastavení, úroveň rodičovského týmu).",
+        "en": "A subteam inherits its parent team's access and can only restrict it further: effective level = min(own setting, parent team's level)."
+      }
+    },
+    {
+      "id": "user",
+      "text": {
+        "cs": "Uživatel ve více týmech dostane nejvyšší z jejich úrovní.",
+        "en": "A user in several teams gets the highest of their levels."
+      }
+    },
+    {
+      "id": "full",
+      "text": {
+        "cs": "Role s plným přístupem (Vlastník, Administrátor) má na veškerém obsahu Upravit a zamknout, bez ohledu na týmy.",
+        "en": "A role with full access (Owner, Administrator) has Edit & lock on all content, regardless of teams."
+      }
+    },
+    {
+      "id": "lock",
+      "text": {
+        "cs": "Zamčenou položku smí upravovat, přesouvat a mazat jen uživatel s úrovní Upravit a zamknout.",
+        "en": "A locked item can only be edited, moved or deleted by a user with Edit & lock."
+      }
+    },
+    {
+      "id": "datacloud",
+      "text": {
+        "cs": "Data Cloud ukazuje soubory ze smartpage, které uživatel smí zobrazit. Stažení vyžaduje Zobrazit a stáhnout na zdrojové smartpage.",
+        "en": "Data Cloud shows files from smartpages the user may view. Downloading needs View & download on the source smartpage."
+      }
+    },
+    {
+      "id": "roles",
+      "text": {
+        "cs": "Role určuje globální schopnosti (tabulka níže), týmy určují přístup k obsahu. Každý uživatel má právě jednu roli.",
+        "en": "A role sets global capabilities (table below), teams set access to content. Every user has exactly one role."
+      }
+    }
+  ]
+}

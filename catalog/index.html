@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Component catalogue</title>
+<link rel="stylesheet" href="/ds/tokens.css">
+<link rel="stylesheet" href="/ds/base.css">
+<link rel="stylesheet" href="/ds/components.css">
+<link rel="stylesheet" href="/app/core.css">
+<link rel="stylesheet" href="/app/modules/home/module.css">
+<style>
+  /* the catalogue scrolls normally (the app shell locks the body) */
+  html,body{height:auto}body{overflow:auto}
+  .cat{display:grid;grid-template-columns:220px minmax(0,1fr);gap:var(--sp-3xl);max-width:1280px;margin:0 auto;padding:var(--sp-2xl)}
+  .cat nav{position:sticky;top:calc(var(--bc-topbar-h,0px) + 24px);align-self:start;display:flex;flex-direction:column;gap:2px}
+  .cat nav a{padding:6px 10px;border-radius:var(--r-xs);color:var(--text-secondary);text-decoration:none;font:var(--t-body-s)}
+  .cat nav a:hover{background:var(--surface-tertiary)}
+  .cat h1{font:var(--t-h2);margin-bottom:var(--sp-2xs)}
+  .intro{color:var(--text-tertiary);margin-bottom:var(--sp-2xl);max-width:72ch}
+  .cs{margin-bottom:var(--sp-3xl);scroll-margin-top:60px}
+  .cs__h{display:flex;align-items:baseline;gap:var(--sp-m);margin-bottom:var(--sp-m)}
+  .cs__h h2{font:var(--t-h4)}
+  .cs__h code{font:var(--t-cap);color:var(--text-tertiary)}
+  .cs__fig{margin-left:auto;font:var(--t-cap);color:var(--text-tertiary)}
+  .demo{display:flex;flex-wrap:wrap;align-items:center;gap:var(--sp-m);padding:var(--sp-xl);background:var(--surface-primary);border:1px solid var(--border-subtle);border-radius:var(--r-l)}
+  .demo--col{flex-direction:column;align-items:stretch}
+  .lbl{width:100%;font:var(--t-cap-b);color:var(--text-tertiary);text-transform:uppercase;letter-spacing:.04em;margin-top:var(--sp-s)}
+  .lbl:first-child{margin-top:0}
+  .sw{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:var(--sp-s);width:100%}
+  .sw div{display:flex;align-items:center;gap:var(--sp-s);font:var(--t-cap)}
+  .sw span{flex:none;width:36px;height:36px;border-radius:var(--r-s);box-shadow:inset 0 0 0 1px var(--root-neutral-transparent-black-10)}
+  .sw code{word-break:break-all;color:var(--text-secondary)}
+  .icons{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:var(--sp-s);width:100%}
+  .icons div{display:flex;flex-direction:column;align-items:center;gap:6px;padding:var(--sp-s);border-radius:var(--r-s);font:var(--t-tiny);color:var(--text-tertiary);text-align:center}
+  .icons div:hover{background:var(--surface-secondary)}
+  .icons bc-icon{color:var(--icon-primary)}
+  .type div{padding:4px 0}.type small{display:inline-block;width:110px;font:var(--t-cap);color:var(--text-tertiary)}
+  .cards{width:100%}
+  @media (max-width:900px){.cat{grid-template-columns:1fr}.cat nav{display:none}}
+</style>
+</head>
+<body>
+<div class="cat">
+  <nav id="toc" aria-label="Components"></nav>
+  <main>
+    <h1>BrandCloud – component catalogue</h1>
+    <p class="intro">Every component of the prototype, rendered from the live design system (<code>/ds/</code>). Each entry names its Figma component; set its <code>figma</code> URL in <code>COMPONENTS</code> (catalog/index.html) so design and code can be compared. Accent:
+      <select class="bc-select" id="accent" style="width:auto;height:32px;display:inline-block"></select></p>
+    <div id="sections"></div>
+  </main>
+</div>
+<script src="/data/bc-data.js"></script>
+<script src="/ds/icons.js"></script>
+<script src="/ds/components.js"></script>
+<script>
+'use strict';
+const esc = BCUI.esc, ic = (n, s = 20) => `<bc-icon name="${n}" size="${s}"></bc-icon>`;
+const varsOf = prefix => [...document.styleSheets].flatMap(s => { try { return [...s.cssRules]; } catch (e) { return []; } })
+  .filter(r => r.selectorText === ':root').flatMap(r => [...r.style]).filter(p => p.startsWith(prefix));
+const sw = names => `<div class="sw">${[...new Set(names)].map(n => `<div><span style="background:var(${n})"></span><code>${n}<br>${getComputedStyle(document.documentElement).getPropertyValue(n).trim()}</code></div>`).join('')}</div>`;
+// figma: paste the component's Figma URL (…?node-id=…) here – the catalogue links to it
+const COMPONENTS = [
+  {id: 'colours', name: 'Colour tokens', code: '--typo-* --surface-* --stroke-* --icon-*', figma: '', html: () => `<div class="lbl">Accent (client-themable)</div>${sw(varsOf('--accent-').concat('--on-accent'))}<div class="lbl">Typography</div>${sw(varsOf('--typo-'))}<div class="lbl">Surface</div>${sw(varsOf('--surface-').concat(varsOf('--background-')))}<div class="lbl">Stroke</div>${sw(varsOf('--stroke-'))}<div class="lbl">Icon</div>${sw(varsOf('--icon-'))}`},
+  {id: 'type', name: 'Typography', code: '--t-*', figma: '', html: () => `<div class="type" style="width:100%">${['h1', 'h2', 'h3', 'h4', 'h5', 'body-l', 'body', 'body-b', 'body-s', 'body-s-b', 'tiny', 'sp-h1', 'sp-h2', 'sp-h3', 'sp-p'].map(k => `<div style="font:var(--t-${k})"><small>--t-${k}</small>Příliš žluťoučký kůň</div>`).join('')}</div>`},
+  {id: 'button', name: 'Button', code: '.bc-btn--primary|secondary|ghost|action|danger|danger-ghost · --s · --icon', figma: '', html: () => ['primary', 'secondary', 'ghost', 'action', 'danger', 'danger-ghost'].map(v => `<button class="bc-btn bc-btn--${v}">${ic('plus', 18)}${v}</button>`).join('') +
+    `<div class="lbl">Small · icon · disabled</div><button class="bc-btn bc-btn--primary bc-btn--s">Small</button><button class="bc-btn bc-btn--secondary bc-btn--icon" aria-label="More">${ic('ellipsis', 18)}</button><button class="bc-btn bc-btn--primary" disabled title="Needs the Edit level">Disabled</button><button class="bc-btn bc-btn--secondary" disabled>Disabled</button>`},
+  {id: 'fields', name: 'Input / Select / Textarea / Search', code: '.bc-field .bc-input .bc-select .bc-textarea .bc-search', figma: '', html: () => `<label class="bc-field" style="width:260px"><span>Label</span><input class="bc-input" placeholder="Placeholder"><small>Hint text</small></label><label class="bc-field" style="width:200px"><span>Select</span><select class="bc-select"><option>Option</option></select></label><label class="bc-search" style="width:260px"><bc-icon name="search" size="18"></bc-icon><input class="bc-input" type="search" placeholder="Search"></label><label class="bc-field" style="width:100%"><span>Textarea</span><textarea class="bc-textarea"></textarea></label>`},
+  {id: 'choice', name: 'Checkbox / Radio / Toggle', code: '.bc-check .bc-radio .bc-toggle .bc-choice', figma: '', html: () => `<label class="bc-choice"><input type="checkbox" class="bc-check" checked>Checked</label><label class="bc-choice"><input type="checkbox" class="bc-check">Unchecked</label><label class="bc-choice"><input type="checkbox" class="bc-check" disabled>Disabled</label><label class="bc-choice"><input type="radio" class="bc-radio" name="r" checked>Radio</label><label class="bc-choice"><input type="radio" class="bc-radio" name="r">Radio</label><label class="bc-choice"><input type="checkbox" class="bc-toggle" checked>Toggle</label>`},
+  {id: 'badges', name: 'Badge / Tag / Chip', code: '.bc-badge--success|warning|error|action .bc-tag .chip', figma: '', html: () => `<span class="bc-badge bc-badge--success">Schváleno</span><span class="bc-badge bc-badge--warning">Čeká na schválení</span><span class="bc-badge bc-badge--error">Zamítnuto</span><span class="bc-badge">Koncept</span><span class="bc-badge bc-badge--action">Vy</span><span class="bc-badge">${ic('lock', 14)}Zamčeno</span><span class="bc-tag">štítek<button aria-label="Remove">${ic('x', 12)}</button></span><button class="chip" aria-pressed="true">Vybraný</button><button class="chip">Chip</button>`},
+  {id: 'avatar', name: 'Avatar', code: '<bc-avatar name size="s|l">', figma: '', html: () => `<bc-avatar name="Petra Nováková" size="s"></bc-avatar><bc-avatar name="Petra Nováková"></bc-avatar><bc-avatar name="Jan Král" size="l"></bc-avatar>`},
+  {id: 'cards', name: 'Item card – folder / smartpage / link', code: '.card--folder (stacked sheet + tab) .card--page (dog-ear) .card--link', figma: '', html: () => `<div class="cards">${[['folder', 'bc-folder', 'Složka', '4 položky'], ['page', 'bc-smartpage', 'Smartpage', '<span class="bc-badge bc-badge--success">Schváleno</span>'], ['link', 'link', 'Odkaz', 'brand.example']].map(([k, i, n, m]) => `<article class="card card--${k}"><div class="card__cover"><span class="card__ph">${ic(i, 40)}</span></div><div class="card__body"><span class="card__name">${ic(i, 18)}<span>${n}</span></span><span class="card__meta">${m}</span></div></article>`).join('')}</div>`},
+  {id: 'matrix', name: 'Permission matrix', code: '<bc-permission-matrix data-config>', figma: '', html: () => `<bc-permission-matrix style="width:100%" data-config='${esc(JSON.stringify({name: 'demo', first: 'Obsah', levels: BC.permissions.levels.map(l => ({id: l.id, label: l.label.cs})), rows: [{id: 'a', label: 'Složka', icon: 'bc-folder', value: 'edit', max: 4}, {id: 'b', label: 'Vnořená smartpage', icon: 'bc-smartpage', depth: 1, value: 'edit', inherited: true, max: 3, note: 'zděděno z: Složka'}, {id: 'c', label: 'Podtým – strop Zobrazit a stáhnout', icon: 'bc-folder', value: 'view', max: 2, sub: true}]}))}'></bc-permission-matrix>`},
+  {id: 'overlays', name: 'Modal / Sidesheet / Menu / Toast', code: 'BCUI.modal() BCUI.modal({side:true}) BCUI.menu() BCUI.toast()', figma: '', html: () => `<button class="bc-btn bc-btn--secondary" data-demo="modal">Modal</button><button class="bc-btn bc-btn--secondary" data-demo="side">Sidesheet</button><button class="bc-btn bc-btn--secondary" data-demo="menu">Menu</button><button class="bc-btn bc-btn--secondary" data-demo="toast">Toast + undo</button><span class="t3" style="font:var(--t-cap)">On a phone (&lt;768 px) the modal opens as a bottomsheet.</span>`},
+  {id: 'empty', name: 'Empty state', code: '.bc-empty', figma: '', html: () => `<div class="bc-empty" style="width:100%">${ic('bc-folder', 32)}<strong>Prázdná složka</strong><span>Vytvořte složku, smartpage nebo odkaz.</span></div>`},
+  {id: 'icons', name: 'Icons', code: '<bc-icon name> – Lucide + bc-folder / bc-smartpage', figma: '', html: () => `<div class="icons">${Object.keys(BCIcons).sort().map(n => `<div>${ic(n, 24)}<span>${n}</span></div>`).join('')}</div>`}
+];
+document.getElementById('toc').innerHTML = COMPONENTS.map(c => `<a href="#${c.id}">${esc(c.name)}</a>`).join('');
+document.getElementById('sections').innerHTML = COMPONENTS.map(c => `<section class="cs" id="${c.id}"><div class="cs__h"><h2>${esc(c.name)}</h2><code>${esc(c.code)}</code><span class="cs__fig">${c.figma ? `<a href="${esc(c.figma)}" target="_blank" rel="noopener">Figma ↗</a>` : 'Figma node: –'}</span></div><div class="demo">${c.html()}</div></section>`).join('');
+const acc = document.getElementById('accent');
+acc.innerHTML = Object.entries(BC.accents).map(([id, a]) => `<option value="${id}">${esc(a.label.en)}</option>`).join('');
+acc.onchange = () => { document.documentElement.dataset.accent = acc.value; document.querySelector('#colours .demo').innerHTML = COMPONENTS[0].html(); };
+document.addEventListener('click', async e => {
+  const b = e.target.closest('[data-demo]'); if (!b) return;
+  const d = b.dataset.demo;
+  if (d === 'modal') BCUI.modal({title: 'Přesunout „Brand manuál“', desc: 'Popis dialogu', body: '<label class="bc-field"><span>Název</span><input class="bc-input"></label>', actions: [{label: 'Zrušit', value: 'c'}, {label: 'Přesunout', value: 'ok', variant: 'primary'}]});
+  if (d === 'side') BCUI.modal({side: true, title: 'soubor.svg', desc: 'SVG · 1,2 MB', body: '<p class="t2">Sidesheet content</p>', actions: [{label: 'Smazat', value: 'd', variant: 'danger-ghost'}, {label: 'Uložit', value: 's', variant: 'primary'}]});
+  if (d === 'menu') BCUI.menu(b, [{label: 'Otevřít', icon: 'bc-smartpage', value: 1}, '-', {label: 'Přejmenovat', icon: 'pencil', value: 2}, {label: 'Zamknout', icon: 'lock', value: 3, disabled: true, why: 'Vyžaduje Upravit a zamknout'}, '-', {label: 'Smazat', icon: 'trash-2', value: 4, danger: true}]);
+  if (d === 'toast') BCUI.toast('Přesunuto do Koše', {action: 'Vrátit'});
+});
+</script>
+</body>
+</html>

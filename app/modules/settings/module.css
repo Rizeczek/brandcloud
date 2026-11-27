@@ -1,0 +1,25 @@
+/* Module settings */
+.setsec{padding:var(--sp-xl);margin-bottom:var(--sp-l)}
+.setsec__h{display:flex;align-items:flex-start;justify-content:space-between;gap:var(--sp-l);margin-bottom:var(--sp-l)}
+.setsec__h h2{font:var(--t-h5)}
+.setsec__h p{margin-top:var(--sp-2xs);font:var(--t-body-s);max-width:64ch}
+.who{display:flex;align-items:center;gap:var(--sp-m)}
+.who strong{font:var(--t-body-b)}.who small{display:block;font:var(--t-cap);color:var(--text-tertiary)}
+.members{display:flex;flex-wrap:wrap;gap:var(--sp-s)}
+.member{display:inline-flex;align-items:center;gap:var(--sp-s);padding:var(--sp-2xs) var(--sp-2xs) var(--sp-2xs) var(--sp-s);border:1px solid var(--border-subtle);border-radius:var(--r-max);font:var(--t-body-s)}
+.member small{display:block;font:var(--t-cap);color:var(--text-tertiary)}
+.member:not(:has(button)){padding-right:var(--sp-m)}
+.ro{display:flex;align-items:center;gap:var(--sp-s);padding:var(--sp-s) var(--sp-m);margin-bottom:var(--sp-l);border-radius:var(--r-s);background:var(--surface-warning-light);font:var(--t-body-s);color:var(--typo-intent-warning-strong)}
+.caps{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:var(--sp-xs) var(--sp-xl)}
+.capt{align-items:flex-start;padding:var(--sp-xs) 0}
+.capt strong{font:var(--t-body-b)}
+.fs{border:0;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+.fs legend{margin-bottom:var(--sp-xs)}
+.accents{display:flex;flex-wrap:wrap;gap:var(--sp-m)}
+.accent{display:flex;align-items:center;gap:var(--sp-s);padding:var(--sp-s) var(--sp-m);border:1px solid var(--border-light);border-radius:var(--r-m);cursor:pointer;font:var(--t-body-b)}
+.accent:has(:checked){border-color:var(--stroke-intent-action-strong);background:var(--surface-action-subtle)}
+.accent__sw{width:24px;height:24px;border-radius:50%;box-shadow:inset 0 0 0 1px var(--root-neutral-transparent-black-10)}
+.accent__demo{display:flex;align-items:center;gap:var(--sp-m);flex-wrap:wrap;margin-top:var(--sp-l);padding:var(--sp-l);border-radius:var(--r-m);background:var(--surface-secondary)}
+.bannerprev{height:var(--size-banner);border-radius:var(--r-m);overflow:hidden;background:var(--surface-inverse)}
+.bannerprev img{width:100%;height:100%;object-fit:cover}
+bc-permission-matrix{display:block;overflow-x:auto}

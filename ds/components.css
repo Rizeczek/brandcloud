@@ -1,0 +1,143 @@
+/* BrandCloud DS – components. Class names follow the Figma component names (Button/Primary → .bc-btn--primary).
+   Primitives are CSS classes on native elements; composite components are custom elements from /ds/components.js.
+   Tokens only – never hex. The accent (client colour) reaches components through --accent-* / intent-action tokens. */
+
+/* ---------- Icon */
+bc-icon,.bc-ic{display:inline-flex;flex:none;align-items:center;justify-content:center;line-height:0}
+bc-icon svg,.bc-ic svg{width:var(--ic,20px);height:var(--ic,20px)}
+
+/* ---------- Button */
+.bc-btn{--h:36px;display:inline-flex;align-items:center;justify-content:center;gap:var(--sp-xs);height:var(--h);padding:0 var(--sp-l);border:1px solid transparent;border-radius:var(--r-s);
+  font:var(--t-body-b);white-space:nowrap;text-decoration:none;background:transparent;color:var(--text-primary);transition:background .15s var(--ease),border-color .15s var(--ease),color .15s var(--ease)}
+.bc-btn bc-icon{--ic:18px}
+.bc-btn--primary{background:var(--surface-action-solid);color:var(--on-accent)}
+.bc-btn--primary:hover{background:var(--accent-10)}
+.bc-btn--secondary{background:var(--surface-primary);border-color:var(--border-light);color:var(--text-primary)}
+.bc-btn--secondary:hover{background:var(--surface-secondary);border-color:var(--border-medium)}
+.bc-btn--ghost{color:var(--text-secondary)}
+.bc-btn--ghost:hover{background:var(--surface-tertiary);color:var(--text-primary)}
+.bc-btn--action{color:var(--text-action)}
+.bc-btn--action:hover{background:var(--surface-action-subtle)}
+.bc-btn--danger{background:var(--surface-danger-solid);color:#fff}
+.bc-btn--danger-ghost{color:var(--text-danger)}.bc-btn--danger-ghost:hover{background:var(--surface-danger-subtle)}
+.bc-btn--s{--h:32px;padding:0 var(--sp-m);font:var(--t-body-s-b)}
+.bc-btn--icon{width:var(--h);padding:0}
+.bc-btn--block{width:100%}
+.bc-btn:disabled,.bc-btn[aria-disabled="true"]{opacity:1;cursor:not-allowed;background:var(--surface-tertiary);border-color:transparent;color:var(--text-disabled)}
+.bc-btn--ghost:disabled,.bc-btn--action:disabled{background:transparent}
+
+/* ---------- Form fields */
+.bc-field{display:flex;flex-direction:column;gap:var(--sp-xs)}
+.bc-field>span,.bc-label{font:var(--t-body-s-b);color:var(--text-secondary)}
+.bc-field small{font:var(--t-cap);color:var(--text-tertiary)}
+.bc-input,.bc-select,.bc-textarea{width:100%;height:40px;padding:0 var(--sp-m);border:1px solid var(--border-medium);border-radius:var(--r-s);background:var(--surface-primary);font:var(--t-body);color:var(--text-primary)}
+.bc-textarea{height:auto;min-height:96px;padding:var(--sp-s) var(--sp-m);resize:vertical}
+.bc-input::placeholder,.bc-textarea::placeholder{color:var(--text-placeholder)}
+.bc-input:focus,.bc-select:focus,.bc-textarea:focus{outline:none;border-color:var(--border-action);box-shadow:0 0 0 3px var(--surface-action-light)}
+.bc-search{position:relative;display:flex;align-items:center}
+.bc-search bc-icon{position:absolute;left:var(--sp-m);--ic:18px;color:var(--icon-tertiary);pointer-events:none}
+.bc-search .bc-input{padding-left:38px}
+
+/* ---------- Checkbox / radio (native inputs, restyled) */
+.bc-check,.bc-radio{appearance:none;flex:none;width:18px;height:18px;margin:0;display:inline-grid;place-items:center;border:1.5px solid var(--border-medium);background:var(--surface-primary);cursor:pointer;transition:background .12s,border-color .12s}
+.bc-check{border-radius:var(--r-2xs)}.bc-radio{border-radius:50%}
+.bc-check:checked{background:var(--surface-action-solid);border-color:var(--surface-action-solid)}
+.bc-check:checked::after{content:"";width:10px;height:6px;border:2px solid var(--on-accent);border-top:0;border-right:0;transform:translateY(-1px) rotate(-45deg)}
+.bc-radio:checked{border-color:var(--surface-action-solid);border-width:5px}
+.bc-check:disabled,.bc-radio:disabled{cursor:not-allowed;background:var(--surface-tertiary);border-color:var(--border-light)}
+.bc-choice{display:flex;align-items:center;gap:var(--sp-s);min-height:36px;font:var(--t-body);cursor:pointer}
+.bc-choice small{display:block;font:var(--t-cap);color:var(--text-tertiary)}
+
+/* ---------- Toggle */
+.bc-toggle{appearance:none;flex:none;width:36px;height:20px;margin:0;border-radius:99px;background:var(--border-medium);position:relative;cursor:pointer;transition:background .15s}
+.bc-toggle::after{content:"";position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:var(--surface-primary);box-shadow:var(--shadow-sm);transition:transform .15s var(--ease)}
+.bc-toggle:checked{background:var(--surface-action-solid)}.bc-toggle:checked::after{transform:translateX(16px)}
+
+/* ---------- Tag / badge / chip */
+.bc-tag{display:inline-flex;align-items:center;gap:var(--sp-2xs);height:24px;padding:0 var(--sp-s);border-radius:var(--r-max);background:var(--surface-tertiary);font:var(--t-cap);color:var(--text-secondary);white-space:nowrap}
+.bc-tag button{display:inline-grid;place-items:center;width:16px;height:16px;margin-right:-4px;padding:0;border:0;border-radius:50%;background:transparent;color:inherit}
+.bc-tag button:hover{background:var(--surface-tertiary)}
+.bc-badge{display:inline-flex;align-items:center;gap:var(--sp-2xs);height:22px;padding:0 var(--sp-s);border-radius:var(--r-2xs);font:var(--t-cap-b);white-space:nowrap;background:var(--surface-tertiary);color:var(--text-secondary)}
+.bc-badge bc-icon{--ic:14px}
+.bc-badge--success{background:var(--surface-intent-success-light);color:var(--typo-intent-success-strong)}
+.bc-badge--warning{background:var(--surface-intent-warning-light);color:var(--typo-intent-warning-strong)}
+.bc-badge--error{background:var(--surface-intent-error-light);color:var(--typo-intent-error-strong)}
+.bc-badge--action{background:var(--surface-action-light);color:var(--text-action-strong)}
+.bc-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--surface-danger-solid)}
+
+/* ---------- Avatar */
+.bc-avatar{--s:32px;flex:none;width:var(--s);height:var(--s);border-radius:50%;display:inline-grid;place-items:center;background:var(--surface-action-light);color:var(--text-action-strong);font:600 calc(var(--s) * .38)/1 var(--ff);text-transform:uppercase}
+.bc-avatar--s{--s:24px}.bc-avatar--l{--s:40px}
+
+/* ---------- Card (container) */
+.bc-card{background:var(--surface-primary);border:1px solid var(--border-subtle);border-radius:var(--r-l)}
+
+/* ---------- Table */
+.bc-table{width:100%;border-collapse:collapse;font:var(--t-body)}
+.bc-table th{text-align:left;font:var(--t-body-s-b);color:var(--text-tertiary);padding:var(--sp-s) var(--sp-m);border-bottom:1px solid var(--border-light);white-space:nowrap}
+.bc-table td{padding:var(--sp-s) var(--sp-m);border-bottom:1px solid var(--border-subtle);vertical-align:middle}
+.bc-table tr:hover td{background:var(--hover-subtle)}
+.bc-table .num{text-align:right;font-variant-numeric:tabular-nums}
+
+/* ---------- Empty state */
+.bc-empty{display:flex;flex-direction:column;align-items:center;gap:var(--sp-s);padding:var(--sp-4xl) var(--sp-xl);text-align:center;color:var(--text-tertiary)}
+.bc-empty bc-icon{--ic:32px;color:var(--icon-tertiary)}
+.bc-empty strong{font:var(--t-h5);color:var(--text-primary)}
+
+/* ---------- Menu (popover) – BCUI.menu() */
+.bc-menu{position:fixed;z-index:60;min-width:220px;max-width:320px;padding:var(--sp-2xs);background:var(--surface-primary);border:1px solid var(--border-subtle);border-radius:var(--r-m);box-shadow:var(--shadow-lg);animation:bc-pop .12s var(--ease)}
+.bc-menu button{display:flex;align-items:center;gap:var(--sp-s);width:100%;min-height:36px;padding:0 var(--sp-s);border:0;border-radius:var(--r-xs);background:transparent;font:var(--t-body);text-align:left;color:var(--text-primary)}
+.bc-menu button bc-icon{--ic:18px;color:var(--icon-secondary)}
+.bc-menu button:hover{background:var(--surface-tertiary)}
+.bc-menu button.is-danger{color:var(--text-danger)}.bc-menu button.is-danger bc-icon{color:var(--icon-danger)}
+.bc-menu button:disabled{color:var(--text-disabled);background:transparent;cursor:not-allowed}.bc-menu button:disabled bc-icon{color:var(--text-disabled)}
+.bc-menu hr{margin:var(--sp-2xs) 0;border:0;border-top:1px solid var(--border-subtle)}
+.bc-menu .bc-menu__why{display:block;margin-left:auto;font:var(--t-cap);color:var(--text-tertiary)}
+@keyframes bc-pop{from{opacity:0;transform:translateY(-4px)}}
+
+/* ---------- Modal – <bc-modal> / BCUI.modal(). Desktop = centred dialog, mobile = bottomsheet */
+.bc-scrim{position:fixed;inset:0;z-index:50;background:var(--root-neutral-transparent-black-40);animation:bc-fade .15s}
+.bc-modal{position:fixed;z-index:51;left:50%;top:50%;transform:translate(-50%,-50%);width:min(var(--w,520px),calc(100vw - 32px));max-height:calc(100vh - 64px);display:flex;flex-direction:column;background:var(--surface-primary);border-radius:var(--r-xl);box-shadow:var(--shadow-lg);animation:bc-in .18s var(--ease)}
+.bc-modal--l{--w:760px}.bc-modal--s{--w:420px}
+.bc-modal__head{display:flex;align-items:flex-start;gap:var(--sp-m);padding:var(--sp-xl) var(--sp-xl) var(--sp-m)}
+.bc-modal__head h2{flex:1;font:var(--t-h4)}
+.bc-modal__head p{margin-top:var(--sp-2xs);font:var(--t-body-s);color:var(--text-tertiary)}
+.bc-modal__body{flex:1;overflow:auto;padding:var(--sp-2xs) var(--sp-xl) var(--sp-xl)}
+.bc-modal__foot{display:flex;justify-content:flex-end;gap:var(--sp-s);padding:var(--sp-m) var(--sp-xl) var(--sp-xl)}
+.bc-modal__grab{display:none}
+@keyframes bc-in{from{opacity:0;transform:translate(-50%,-48%)}}
+@keyframes bc-fade{from{opacity:0}}
+@media (max-width:767px){
+  .bc-modal{left:0;right:0;top:auto;bottom:0;transform:none;width:100%;max-height:85vh;border-radius:var(--r-xl) var(--r-xl) 0 0;animation:bc-up .22s var(--ease)}
+  .bc-modal__grab{display:block;width:36px;height:4px;margin:var(--sp-s) auto 0;border-radius:2px;background:var(--border-light)}
+  .bc-modal__head{padding-top:var(--sp-m)}
+  .bc-modal__foot>*{flex:1}
+}
+@keyframes bc-up{from{transform:translateY(100%)}}
+
+/* ---------- Sidesheet – <bc-sidesheet> / BCUI.sidesheet() */
+.bc-sidesheet{position:fixed;z-index:51;top:0;right:0;bottom:0;width:min(var(--size-sidesheet),100vw);display:flex;flex-direction:column;background:var(--surface-primary);box-shadow:var(--shadow-lg);animation:bc-left .2s var(--ease)}
+.bc-sidesheet .bc-modal__head{border-bottom:1px solid var(--border-subtle);padding-bottom:var(--sp-l)}
+.bc-sidesheet .bc-modal__body{padding-top:var(--sp-l)}
+.bc-sidesheet .bc-modal__foot{border-top:1px solid var(--border-subtle);padding-top:var(--sp-l)}
+@keyframes bc-left{from{transform:translateX(100%)}}
+
+/* ---------- Toast – BCUI.toast() */
+.bc-toast{position:fixed;z-index:70;left:50%;bottom:var(--sp-2xl);transform:translateX(-50%);display:flex;align-items:center;gap:var(--sp-m);min-height:44px;padding:var(--sp-s) var(--sp-s) var(--sp-s) var(--sp-l);border-radius:var(--r-m);background:var(--surface-inverse);color:var(--text-inverse-primary);font:var(--t-body);box-shadow:var(--shadow-lg);animation:bc-toast .2s var(--ease)}
+.bc-toast .bc-btn{--h:32px;color:var(--text-inverse-primary)}.bc-toast .bc-btn:hover{background:var(--root-neutral-transparent-white-10)}
+@keyframes bc-toast{from{opacity:0;transform:translate(-50%,8px)}}
+@media (max-width:767px){.bc-toast{bottom:calc(72px + var(--sp-s));max-width:calc(100vw - 24px)}}
+
+/* ---------- Permission matrix – <bc-permission-matrix> */
+.bc-pmx{width:100%;border-collapse:collapse}
+.bc-pmx th{font:var(--t-cap-b);color:var(--text-tertiary);text-align:center;padding:var(--sp-s) var(--sp-2xs);border-bottom:1px solid var(--border-light);vertical-align:bottom}
+.bc-pmx th:first-child{text-align:left;padding-left:0}
+.bc-pmx td{text-align:center;padding:0 var(--sp-2xs);height:44px;border-bottom:1px solid var(--border-subtle)}
+.bc-pmx td:first-child{text-align:left;padding-left:calc(var(--depth,0) * 20px)}
+.bc-pmx__name{display:flex;align-items:center;gap:var(--sp-s);font:var(--t-body)}
+.bc-pmx__name bc-icon{--ic:18px;color:var(--icon-secondary)}
+.bc-pmx__name small{font:var(--t-cap);color:var(--text-tertiary)}
+.bc-pmx label{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:50%;cursor:pointer}
+.bc-pmx label:hover{background:var(--hover-subtle)}
+.bc-pmx .is-inherited .bc-radio:checked{border-color:var(--border-medium)}
+.bc-pmx tr.is-sub td{background:var(--surface-secondary)}

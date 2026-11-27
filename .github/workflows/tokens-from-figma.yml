@@ -1,0 +1,51 @@
+name: Tokens from Figma
+
+# Receives a token export pushed from Figma and publishes it:
+#   Figma Design Tokens plugin → "Send to server" → GitHub (repository_dispatch, event type update-tokens)
+#   → checks (references, aliases, WCAG contrast under every client accent) → commit ds/tokens/figma.tokens.json → deploy.
+# If the checks fail nothing is committed and the run shows why.
+# NOTE: verify the payload field name with the first real push from the plugin (expected client_payload.tokens).
+
+on:
+  repository_dispatch:
+    types: [update-tokens]
+
+permissions:
+  contents: write
+
+jobs:
+  tokens:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Write the export
+        env:
+          PAYLOAD: ${{ toJson(github.event.client_payload) }}
+        run: |
+          node -e '
+            const p = JSON.parse(process.env.PAYLOAD || "{}");
+            let t = p.tokens ?? p;
+            if (typeof t === "string") t = JSON.parse(t);
+            if (!t || !t.semantic || !t.root) { console.error("payload has no root/semantic token groups"); process.exit(1); }
+            require("fs").writeFileSync("ds/tokens/figma.tokens.json", JSON.stringify(t, null, 2) + "\n");
+          '
+      - run: npm ci --no-audit --no-fund
+      - name: Check tokens
+        run: node scripts/tokens.mjs --check
+      - name: Commit
+        run: |
+          if git diff --quiet; then echo "no token changes"; exit 0; fi
+          git config user.name "figma-tokens[bot]"
+          git config user.email "figma-tokens@users.noreply.github.com"
+          git add ds/tokens/figma.tokens.json
+          git commit -m "Tokens: update from Figma"
+          git push
+  deploy:
+    needs: tokens
+    uses: ./.github/workflows/deploy.yml
+    secrets: inherit

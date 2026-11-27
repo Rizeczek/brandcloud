@@ -1,0 +1,108 @@
+{
+ "_doc": "PLACEHOLDER. The fictional test brand is not chosen yet – name, colours, fonts and assets will be supplied and replace this file and data/assets/.",
+ "placeholder": true,
+ "name": "Brand",
+ "workspace": {
+  "cs": "Brand portál",
+  "en": "Brand portal"
+ },
+ "domain": "brand.example",
+ "tagline": {
+  "cs": "Zástupný slogan značky",
+  "en": "Placeholder brand tagline"
+ },
+ "colors": [
+  {
+   "id": "c1",
+   "name": {
+    "cs": "Hlavní barva",
+    "en": "Primary colour"
+   },
+   "hex": "#3F4A5A",
+   "rgb": "63 74 90",
+   "cmyk": "30 18 0 65",
+   "pantone": "–"
+  },
+  {
+   "id": "c2",
+   "name": {
+    "cs": "Doplňková 1",
+    "en": "Secondary 1"
+   },
+   "hex": "#8A94A6",
+   "rgb": "138 148 166",
+   "cmyk": "17 11 0 35",
+   "pantone": "–"
+  },
+  {
+   "id": "c3",
+   "name": {
+    "cs": "Doplňková 2",
+    "en": "Secondary 2"
+   },
+   "hex": "#C5CBD6",
+   "rgb": "197 203 214",
+   "cmyk": "8 5 0 16",
+   "pantone": "–"
+  },
+  {
+   "id": "c4",
+   "name": {
+    "cs": "Pozadí",
+    "en": "Background"
+   },
+   "hex": "#EEF0F4",
+   "rgb": "238 240 244",
+   "cmyk": "2 2 0 4",
+   "pantone": "–"
+  },
+  {
+   "id": "c5",
+   "name": {
+    "cs": "Text",
+    "en": "Text"
+   },
+   "hex": "#1E2026",
+   "rgb": "30 32 38",
+   "cmyk": "21 16 0 85",
+   "pantone": "–"
+  }
+ ],
+ "fonts": [
+  {
+   "id": "display",
+   "family": "Georgia",
+   "role": {
+    "cs": "Nadpisy",
+    "en": "Headlines"
+   },
+   "weights": [
+    400,
+    700
+   ],
+   "sample": {
+    "cs": "Zástupný nadpis značky",
+    "en": "Placeholder brand headline"
+   }
+  },
+  {
+   "id": "text",
+   "family": "Mona Sans",
+   "role": {
+    "cs": "Texty",
+    "en": "Body text"
+   },
+   "weights": [
+    400,
+    600
+   ],
+   "sample": {
+    "cs": "Příliš žluťoučký kůň úpěl ďábelské ódy.",
+    "en": "The quick brown fox jumps over the lazy dog."
+   }
+  }
+ ],
+ "banner": "/data/assets/banner.svg",
+ "logo": "/data/assets/logo-primary.svg",
+ "mark": "/data/assets/logo-mark.svg"
+}

@@ -1,0 +1,8 @@
+{
+ "title": "Settings – users, teams, roles",
+ "description": "Users, teams with subteams and the ceiling-based permission matrix, custom roles with capabilities, client design (accent, banner).",
+ "module": "settings",
+ "device": "desktop",
+ "added": "2026-11-27T11:04",
+ "figma": ""
+}

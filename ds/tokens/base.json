@@ -1,0 +1,6 @@
+{
+  "_source": "Spacing and radii are not in the Figma variables export yet. Values follow the 4 px grid of the BrandCloud spec; replace them when the Number collection is exported.",
+  "space": {"zero": 0, "3xs": 2, "2xs": 4, "xs": 6, "s": 8, "m": 12, "l": 16, "xl": 20, "2xl": 24, "3xl": 32, "4xl": 48},
+  "radius": {"2xs": 4, "xs": 6, "s": 8, "m": 10, "l": 12, "xl": 16, "max": 999},
+  "layout": {"rail": 56, "panel": 264, "banner": 160, "topbar": 36, "sidesheet": 440, "content": 1280}
+}

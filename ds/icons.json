@@ -1,0 +1,11 @@
+{
+  "_doc": "Lucide icons bundled into /ds/icons.js (names from https://lucide.dev/icons/, validated against the lucide-static package at build). Custom BrandCloud icons live in ds/icons/<name>.svg and are available as bc-<name>.",
+  "lucide": [
+    "house", "cloud", "shopping-cart", "chart-column", "trash-2", "settings", "bell", "search", "plus", "x", "check", "chevron-right", "chevron-down", "chevron-left",
+    "share-2", "lock", "lock-open", "eye", "eye-off", "download", "pencil", "users", "user", "user-plus", "shield", "palette", "type", "image", "minus", "heading-1", "heading-2", "heading-3",
+    "pilcrow", "rotate-ccw", "languages", "layers", "ellipsis", "ellipsis-vertical", "arrow-left", "arrow-up", "arrow-down", "upload", "tag", "copy", "folder-input", "send",
+    "circle-check", "circle-x", "clock", "link", "log-out", "menu", "layout-grid", "list", "sliders-horizontal", "arrow-up-down", "undo-2", "file", "file-text", "file-image",
+    "file-video", "file-archive", "info", "external-link", "panel-left", "square-check", "square", "grip-vertical", "message-square", "history", "badge-check", "triangle-alert",
+    "refresh-cw", "flask-conical", "user-round-cog", "globe"
+  ]
+}

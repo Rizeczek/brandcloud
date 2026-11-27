@@ -1,0 +1,12 @@
+{
+  "_doc": "Client accent themes. Every semantic token that points at the default accent scale (cloud blue) is emitted as var(--accent-N), so a client accent swaps the whole intent/action layer. <html data-accent=\"<id>\"> switches. on-accent (text/icons on accent-9) is chosen at build time: white if it reaches 4.5:1, otherwise mauve 13.",
+  "default": "blue",
+  "scale": "root.colour.cloud blue",
+  "accents": {
+    "blue":    {"label": {"cs": "Modrá", "en": "Blue"},     "scale": "root.colour.cloud blue"},
+    "ruby":    {"label": {"cs": "Rubínová", "en": "Ruby"},  "scale": "root.colour.ruby",
+                "waive": [{"fg": "on-accent", "bg": "surface-intent-action-strong", "why": "ruby 9 reaches only 4.19:1 with white and less with mauve 13 – open design decision (use step 10/11 for solid buttons?)"}]},
+    "emerald": {"label": {"cs": "Smaragdová", "en": "Emerald"}, "scale": "root.colour.emerald"},
+    "amber":   {"label": {"cs": "Jantarová", "en": "Amber"}, "scale": "root.colour.amber"}
+  }
+}

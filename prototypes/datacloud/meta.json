@@ -1,0 +1,8 @@
+{
+ "title": "Data Cloud",
+ "description": "Read-only registry of every file used on smartpages: filters, edit sidesheet, delete and batch delete in the floating action bar.",
+ "module": "datacloud",
+ "device": "desktop",
+ "added": "2026-11-27T11:03",
+ "figma": ""
+}

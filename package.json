@@ -1,0 +1,16 @@
+{
+  "name": "brandcloud-prototypes",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/build.mjs && node scripts/serve.mjs",
+    "tokens:check": "node scripts/tokens.mjs --check",
+    "docs": "node scripts/permissions-doc.mjs",
+    "data": "node scripts/gen-data.mjs",
+    "redesign": "node scripts/redesign.mjs"
+  },
+  "devDependencies": {
+    "lucide-static": "1.82.0"
+  }
+}

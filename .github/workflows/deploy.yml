@@ -1,0 +1,65 @@
+name: Deploy to Wedos
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  workflow_call:          # used by tokens-from-figma.yml after it commits new tokens
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install (lucide-static for the icon set)
+        run: npm ci --no-audit --no-fund
+
+      - name: Check tokens (aliases, references, WCAG contrast under every accent)
+        run: node scripts/tokens.mjs --check
+
+      - name: Build (tokens, icons, data, prototypes, signpost)
+        env:
+          CI: '1'
+        run: node scripts/build.mjs
+
+      - name: Login config (password hashes only)
+        env:
+          SV_ADMIN_PASSWORD: ${{ secrets.SV_ADMIN_PASSWORD }}
+          SV_VIEWER_PASSWORD: ${{ secrets.SV_VIEWER_PASSWORD }}
+        run: |
+          mkdir -p dist/_sv/data
+          php scripts/make-config.php > dist/_sv/data/config.php
+          php -l dist/_sv/data/config.php
+
+      - name: Normalise target dir
+        id: dir
+        env:
+          TARGET: ${{ secrets.FTP_TARGET_DIR }}
+        run: |
+          d="${TARGET%/}/"
+          echo "dir=$d" >> "$GITHUB_OUTPUT"
+
+      - name: Upload via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: dist/
+          server-dir: ${{ steps.dir.outputs.dir }}

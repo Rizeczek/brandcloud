@@ -1,0 +1,13 @@
+/* Module datacloud */
+.dcgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:var(--sp-m)}
+.dcc{position:relative;display:flex;flex-direction:column;border:1px solid var(--border-subtle);border-radius:var(--r-m);overflow:hidden;background:var(--surface-primary);transition:border-color .15s}
+.dcc:hover{border-color:var(--border-light)}
+.dcc.is-sel{border-color:var(--stroke-intent-action-strong);box-shadow:0 0 0 1px var(--stroke-intent-action-strong)}
+.dcc__t{position:relative;display:grid;place-items:center;aspect-ratio:4/3;overflow:hidden;border:0;padding:0;background:var(--surface-secondary);color:var(--icon-tertiary)}
+.dcc__t img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.dcc__b{display:flex;flex-direction:column;min-width:0;padding:var(--sp-s) var(--sp-m)}
+.dcc:hover .dcc__sel,.dcc.is-sel .dcc__sel,.dcgrid:has(.is-sel) .dcc__sel,.dcc:focus-within .dcc__sel{opacity:1}
+.dc-row__n{border:0;background:none;padding:0;cursor:pointer}
+.dc-row__t{display:grid;place-items:center;width:32px;height:32px;border-radius:var(--r-2xs);overflow:hidden;background:var(--surface-secondary);color:var(--icon-tertiary)}
+.dc-row__t img{width:100%;height:100%;object-fit:cover}
+.dc-prev{max-height:240px}.dc-prev img{max-height:240px}

@@ -1,0 +1,8 @@
+[
+ {"id": "home", "title": "Home & folders", "start": ""},
+ {"id": "smartpage", "title": "Smartpage (preview + editor)", "start": "p/p-brandbook"},
+ {"id": "datacloud", "title": "Data Cloud", "start": "datacloud"},
+ {"id": "settings", "title": "Settings – users, teams, roles, design", "start": "settings"},
+ {"id": "trash", "title": "Trash", "start": "trash"},
+ {"id": "placeholder", "title": "E-shop & Statistics (not in prototype yet)", "start": "eshop"}
+]

@@ -1,0 +1,19 @@
+{
+  "_doc": "Colour pairs the UI relies on, checked by `npm run tokens:check` (and every build) under every client accent. level error = build fails, warn = reported only. Names are CSS variable names without the leading --.",
+  "pairs": [
+    {"fg": "typo-neutral-strong",  "bg": "surface-neutral-primary", "min": 4.5, "level": "error"},
+    {"fg": "typo-neutral-default", "bg": "surface-neutral-primary", "min": 4.5, "level": "error"},
+    {"fg": "typo-neutral-light",   "bg": "surface-neutral-primary", "min": 4.5, "level": "error"},
+    {"fg": "typo-neutral-light",   "bg": "background-neutral-primary", "min": 4.5, "level": "error"},
+    {"fg": "typo-neutral-subtle",  "bg": "surface-neutral-primary", "min": 3,   "level": "warn", "note": "placeholder / meta only, never body text"},
+    {"fg": "typo-intent-action",   "bg": "surface-neutral-primary", "min": 4.5, "level": "error"},
+    {"fg": "typo-intent-action",   "bg": "surface-intent-action-light", "min": 4.5, "level": "warn"},
+    {"fg": "on-accent",            "bg": "surface-intent-action-strong", "min": 4.5, "level": "error"},
+    {"fg": "typo-intent-error",    "bg": "surface-neutral-primary", "min": 4.5, "level": "error"},
+    {"fg": "typo-intent-success",  "bg": "surface-neutral-primary", "min": 4.5, "level": "error"},
+    {"fg": "typo-intent-warning",  "bg": "surface-neutral-primary", "min": 4.5, "level": "warn"},
+    {"fg": "typo-inverse-strong",  "bg": "surface-inverse-primary", "min": 4.5, "level": "error"},
+    {"fg": "typo-inverse-light",   "bg": "surface-inverse-primary", "min": 4.5, "level": "error"},
+    {"fg": "stroke-neutral-subtle","bg": "surface-neutral-primary", "min": 1.5, "level": "warn", "note": "input borders"}
+  ]
+}
